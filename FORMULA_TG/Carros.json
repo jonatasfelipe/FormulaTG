@@ -1,0 +1,65 @@
+[
+    {
+        "Cor": "PRETO",
+        "Marca": "CHEVROLET",
+        "Modelo": "OPALA",
+        "Ano": 1974,
+        "Placa": "GTR2147",
+        "Piloto": "JONATAS",
+        "Posicao": 1
+    },
+    {
+        "Cor": "PRATA",
+        "Marca": "VOLKSWAGEN",
+        "Modelo": "GOL",
+        "Ano": 2020,
+        "Placa": "RHU4687",
+        "Piloto": "RHUAN",
+        "Posicao": 2
+    },
+    {
+        "Cor": "VERMELHO",
+        "Marca": "FERRARI",
+        "Modelo": "F1",
+        "Ano": 2020,
+        "Placa": "SAE2145",
+        "Piloto": "PEDRO",
+        "Posicao": 3
+    },
+    {
+        "Cor": "ROXO",
+        "Marca": "HONDA",
+        "Modelo": "CIVIC",
+        "Ano": 2020,
+        "Placa": "ASW1456",
+        "Piloto": "JUNIOR",
+        "Posicao": 4
+    },
+    {
+        "Cor": "DOURADA",
+        "Marca": "LAMBORGHINI",
+        "Modelo": "AVENTADOR",
+        "Ano": 2020,
+        "Placa": "SAW2145",
+        "Piloto": "MAIA",
+        "Posicao": 5
+    },
+    {
+        "Cor": "VINHO",
+        "Marca": "ROLLS ROYCE",
+        "Modelo": "GHOST",
+        "Ano": 2021,
+        "Placa": "AWQ2787",
+        "Piloto": "RENATO",
+        "Posicao": 6
+    },
+    {
+        "Cor": "BRANCO",
+        "Marca": "MERCEDES",
+        "Modelo": "AMG GT",
+        "Ano": 2020,
+        "Placa": "AET9854",
+        "Piloto": "BRUNO",
+        "Posicao": 7
+    }
+]
