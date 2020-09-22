@@ -1,6 +1,6 @@
 <?php
-
-include 'CadastrarCarro.php';
+require_once 'Helper.php';
+require_once 'CadastrarCarro.php';
 
 class EscolherOpcaoMenu
 {
@@ -8,7 +8,8 @@ class EscolherOpcaoMenu
     public function opcaoMenu()
     {
 
-        $opcaoEscolhidaMenu = readline("Escolha a opção desejada: \n");
+        $helper = new Helper();
+        $opcaoEscolhidaMenu = $helper->getInputValue("Escolha a opção desejada! \n");
 
         switch ($opcaoEscolhidaMenu) {
 
@@ -18,26 +19,22 @@ class EscolherOpcaoMenu
                 break;
 
             case 1:
-                echo "\n";
-                break;
-
-            case 2:
                 echo "Iniciar Corrida";
                 break;
 
-            case 3:
+            case 2:
                 echo "Realizar Ultrapassagem";
                 break;
 
-            case 4:
+            case 3:
                 echo "Finalizar Corrida";
                 break;
 
-            case 5:
+            case 4:
                 echo "Histórico de Ultrapassagem";
                 break;
 
-            case 6:
+            case 5:
                 echo "Opção Inválida \n";
                 (new EscolherOpcaoMenu())->opcaoMenu();
                 break;

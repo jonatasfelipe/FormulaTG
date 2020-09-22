@@ -61,5 +61,14 @@
         "Placa": "AET9854",
         "Piloto": "BRUNO",
         "Posicao": 7
+    },
+    {
+        "Cor": "PINK",
+        "Marca": "FORD",
+        "Modelo": "MUSTANG",
+        "Ano": 2020,
+        "Placa": "AWE2145",
+        "Piloto": "ZE",
+        "Posicao": 8
     }
 ]

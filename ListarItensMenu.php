@@ -6,7 +6,7 @@ class ListarItensMenu
     function listarMenu()
     {
 
-        $numeroOpcao = [0 => "Cadastrar Carro", 1 => "Cadastrar Piloto", 2 => "Iniciar Corrida", 3 => "Realizar Ultrapassagem", 4 => "Finalizar Corrida", 5 => "Histórico de Ultrapassagem"];
+        $numeroOpcao = [0 => "Painel Dos Carros", 1 => "Iniciar Corrida", 2 => "Realizar Ultrapassagem", 3 => "Finalizar Corrida", 4 => "Histórico de Ultrapassagem"];
 
         foreach ($numeroOpcao as $chave => $valor) {
 
