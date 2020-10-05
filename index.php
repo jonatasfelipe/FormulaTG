@@ -1,10 +1,8 @@
 <?php
 
-require_once 'ListarItensMenu.php';
-require_once 'EscolherOpcaoMenu.php';
+require_once 'View/ListarMenu.php';
+require_once 'Controller/EscolherOpcaoMenu.php';
 
-echo "Seja Bem Vindo A Corrida! \n\n";
+echo "Seja Bem Vindo A Formula TG! \n\n";
 
-(new ListarItensMenu())->listarMenu();
-
-(new EscolherOpcaoMenu())->opcaoMenu();
+(new ListarMenu())->listarMenuGeral();

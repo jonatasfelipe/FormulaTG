@@ -1,6 +1,6 @@
 <?php
 
-require_once 'DB.php';
+require_once 'Model/DB.php';
 
 class CarroController
 {
@@ -12,7 +12,16 @@ class CarroController
         return $ultimaPosicao + 1;
     }
 
+    public function definirId(): int
+    {
+        $listaCarros = DB::obterListaCarros();
+
+        $ultimoId = count($listaCarros);
+        return $ultimoId + 1;
+    }
+
     public function gravarNovoCarro(
+        int $id,
         string $cor,
         string $marca,
         string $modelo,
@@ -25,6 +34,7 @@ class CarroController
         $listaCarros = DB::obterListaCarros();
 
         $listaCarros[] = [
+            'ID' => $id,
             'Cor' => strtoupper($cor),
             'Marca' => strtoupper($marca),
             'Modelo' => strtoupper($modelo),
