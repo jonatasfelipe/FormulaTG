@@ -1,6 +1,6 @@
 <?php
 
-require_once 'DB.php';
+require_once 'Model/DB.php';
 
 class CarroController
 {
@@ -12,7 +12,25 @@ class CarroController
         return $ultimaPosicao + 1;
     }
 
+    public function definirId(): int
+    {
+        $listaCarros = DB::obterListaCarros();
+
+        $Id = 0;
+
+        foreach ($listaCarros as $ultimoId)
+        {
+            if ($ultimoId['ID'] > $Id){
+                $Id = $ultimoId['ID'];
+            }
+        }
+
+        return $Id + 1;
+
+    }
+
     public function gravarNovoCarro(
+        int $id,
         string $cor,
         string $marca,
         string $modelo,
@@ -25,6 +43,7 @@ class CarroController
         $listaCarros = DB::obterListaCarros();
 
         $listaCarros[] = [
+            'ID' => $id,
             'Cor' => strtoupper($cor),
             'Marca' => strtoupper($marca),
             'Modelo' => strtoupper($modelo),
@@ -36,4 +55,19 @@ class CarroController
 
         DB::gravarListaCarros($listaCarros);
     }
+
+    public function obtemPosicaoPeloNome(string $nomePiloto): int
+    {
+        $listaCarros = DB::obterListaCarros();
+
+        foreach ($listaCarros as $carro)
+        {
+            if ($nomePiloto == $carro['Piloto']){
+                return $carro['Posicao'];
+            }
+        }
+
+        echo "O Piloto $nomePiloto não foi encontrado!";
+    }
+
 }

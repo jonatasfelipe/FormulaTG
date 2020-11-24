@@ -1,10 +1,17 @@
 <?php
 
-require_once 'ListarItensMenu.php';
-require_once 'EscolherOpcaoMenu.php';
+require_once 'View/Bandeira.php';
+require_once 'View/ListarMenu.php';
+require_once 'Controller/EscolherOpcaoMenu.php';
 
-echo "Seja Bem Vindo A Corrida! \n\n";
+echo "\033[2J\033[1;1H"; //limpa tela
 
-(new ListarItensMenu())->listarMenu();
+echo "\n Seja Bem Vindo A \n";
 
-(new EscolherOpcaoMenu())->opcaoMenu();
+Bandeira::imprimeBandeira();
+
+sleep(3);
+
+echo "\033[2J\033[1;1H"; //limpa tela
+
+(new ListarMenu())->listarMenuGeral();
