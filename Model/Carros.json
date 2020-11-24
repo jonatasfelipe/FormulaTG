@@ -70,6 +70,16 @@
         "Posicao": 7
     },
     {
+        "ID": 10,
+        "Cor": "PRATA",
+        "Marca": "JEEP",
+        "Modelo": "RENEGADE",
+        "Ano": 2021,
+        "Placa": "AER4326",
+        "Piloto": "JOSE",
+        "Posicao": 8
+    },
+    {
         "ID": 8,
         "Cor": "BRANCO",
         "Marca": "FORD",
@@ -77,16 +87,16 @@
         "Ano": 2015,
         "Placa": "AWW1245",
         "Piloto": "MAURICIO",
-        "Posicao": 8
+        "Posicao": 9
     },
     {
-        "ID": 9,
-        "Cor": "PRETO",
-        "Marca": "MERCEDES",
-        "Modelo": "AMG",
-        "Ano": 2019,
-        "Placa": "AQQ5487",
-        "Piloto": "MARCOS",
-        "Posicao": 9
+        "ID": 11,
+        "Cor": "VERMELHO",
+        "Marca": "FORD",
+        "Modelo": "MUSTANG",
+        "Ano": 1995,
+        "Placa": "KGH4350",
+        "Piloto": "RAFAEL",
+        "Posicao": 10
     }
 ]

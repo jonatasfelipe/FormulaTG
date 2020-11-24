@@ -27,4 +27,17 @@ class Validador
             exit();
         }
     }
+
+    public function validaStatusCorrida()
+    {
+        $status = DB::obterStatusCorrida();
+
+        foreach ($status as $statusAtual) {
+            if ($statusAtual == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 }

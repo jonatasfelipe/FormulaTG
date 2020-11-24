@@ -16,8 +16,17 @@ class CarroController
     {
         $listaCarros = DB::obterListaCarros();
 
-        $ultimoId = count($listaCarros);
-        return $ultimoId + 1;
+        $Id = 0;
+
+        foreach ($listaCarros as $ultimoId)
+        {
+            if ($ultimoId['ID'] > $Id){
+                $Id = $ultimoId['ID'];
+            }
+        }
+
+        return $Id + 1;
+
     }
 
     public function gravarNovoCarro(
@@ -46,4 +55,19 @@ class CarroController
 
         DB::gravarListaCarros($listaCarros);
     }
+
+    public function obtemPosicaoPeloNome(string $nomePiloto): int
+    {
+        $listaCarros = DB::obterListaCarros();
+
+        foreach ($listaCarros as $carro)
+        {
+            if ($nomePiloto == $carro['Piloto']){
+                return $carro['Posicao'];
+            }
+        }
+
+        echo "O Piloto $nomePiloto não foi encontrado!";
+    }
+
 }

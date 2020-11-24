@@ -11,25 +11,25 @@ class ReorganizarPosicoes
 
         foreach ($listaCarros as $posicao) {
             if ($posicao['Posicao'] == ($indice + 1)) {
-                $indice = $indice+1;
-            } else {
-
-                unset($listaCarros[$indice]);
-
-                $listaCarros[$indice] = [
-                    'ID' => $posicao['ID'],
-                    'Cor' => strtoupper($posicao['Cor']),
-                    'Marca' => strtoupper($posicao['Marca']),
-                    'Modelo' => strtoupper($posicao['Modelo']),
-                    'Ano' => $posicao['Ano'],
-                    'Placa' => strtoupper($posicao['Placa']),
-                    'Piloto' => strtoupper($posicao['Piloto']),
-                    'Posicao' => $indice+1
-                ];
-                DB::gravarListaCarros($listaCarros);
-            $indice = $indice+1;
-
+                $indice = $indice + 1;
+                continue;
             }
+
+            unset($listaCarros[$indice]);
+
+            $listaCarros[$indice] = [
+                'ID' => $posicao['ID'],
+                'Cor' => strtoupper($posicao['Cor']),
+                'Marca' => strtoupper($posicao['Marca']),
+                'Modelo' => strtoupper($posicao['Modelo']),
+                'Ano' => $posicao['Ano'],
+                'Placa' => strtoupper($posicao['Placa']),
+                'Piloto' => strtoupper($posicao['Piloto']),
+                'Posicao' => $indice + 1
+            ];
+            $indice = $indice + 1;
+
         }
+        DB::gravarListaCarros($listaCarros);
     }
 }

@@ -3,12 +3,13 @@
 require_once 'Model/DB.php';
 require_once 'Model/Helper.php';
 require_once 'CarroController.php';
+require_once 'View/ImprimeListaCarros.php';
 
 class EditarCarro
 {
     public function atualizarInformacoesCarro()
     {
-        DB::imprimeListaCarrosFormatada();
+        ImprimeListaCarros::imprimeListaCarrosFormatada();
 
         echo PHP_EOL . PHP_EOL;
 

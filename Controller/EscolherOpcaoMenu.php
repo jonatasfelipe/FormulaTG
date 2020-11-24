@@ -2,6 +2,8 @@
 require_once 'Model/Helper.php';
 require_once 'EscolherOpcaoPainelCarro.php';
 require_once 'Model/DB.php';
+require_once 'RealizarUltrapassagem.php';
+require_once 'Corrida.php';
 
 class EscolherOpcaoMenu
 {
@@ -20,25 +22,17 @@ class EscolherOpcaoMenu
                 break;
 
             case 1:
-                echo "Iniciar Corrida";
+                echo "\n";
+                (new ListarMenu())->listarPainelCorrida();
                 break;
 
-            case 2:
-                echo "Realizar Ultrapassagem";
-                break;
-
-            case 3:
-                echo "Finalizar Corrida";
-                break;
-
-            case 4:
-                echo "Histórico de Ultrapassagem";
-                break;
-
-            case 5:
+            default:
+                echo "\033[2J\033[1;1H"; //limpa tela
                 echo "Opção Inválida \n";
-                (new EscolherOpcaoMenu())->opcaoMenu();
+                (new ListarMenu())->listarMenuGeral();
                 break;
+
         }
+
     }
 }

@@ -7,6 +7,7 @@ class CadastrarCarro
     public function cadastroNovoCarro(): void
     {
         echo "BEM VINDO AO CADASTRO DE UM NOVO CARRO! \n\n";
+
         echo "POR FAVOR RESPONDA AS PERGUNTAS ABAIXO: \n\n";
 
         $classeValidaPiloto = new Validador();
